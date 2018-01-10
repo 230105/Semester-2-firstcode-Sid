@@ -1,0 +1,25 @@
+h1 {
+	color:blue;
+	text-align:center;
+}
+#div1 {
+	border-style: ridge;
+	border-color: red;
+	border-width:50px;
+}
+#div2 {
+	border-style:invert;
+	height:30px; 
+}
+#div3 {
+	background-color:lightblue;
+	height:30px;
+}
+#div4 {
+	background-color:lightblue;
+	height:30px;
+}
+#div5 {
+	background-color:lightblue;
+	height:30px;
+}
