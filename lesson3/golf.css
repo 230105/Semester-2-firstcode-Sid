@@ -1,0 +1,23 @@
+body {
+  height:2000px;
+  background-color:ivory;
+}
+
+h1 {
+  font-size:20px;
+}
+#div1 {
+  border-style:ridge;
+  border-color:white;
+  border-width:30px;
+}
+
+#img1 {
+  width:350px;
+  height:200px;
+}
+
+#img2 {
+  width:370px;
+  height:200px;
+}
