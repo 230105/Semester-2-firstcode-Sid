@@ -49,7 +49,7 @@ function create(){
 	player.animation.add('right', [0,1,2,3],10,true)
 	game.physics.arcade.enable(player);
 	player.body.gravity.y = 300;
-	player.body.bounce/y = 0.2;
+	player.body.bounce.y = 0.2;
 	player.body.collideWorldBounds = true;
 
 
