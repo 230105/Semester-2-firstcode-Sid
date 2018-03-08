@@ -21,7 +21,7 @@ function create(){
 	platforms = game.add.physicsGroup();
 	platforms.enableBody = true;
 	//create ground
-	var ground = platforms.create(0,550 'ground');
+	var ground = platforms.create(0,550, 'ground');
 	ground.scale.setTo(2,2);
 	ground.body.immovable = true;
 	//create ledges
