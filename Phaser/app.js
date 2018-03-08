@@ -45,8 +45,8 @@ function create(){
 	//lesson 8
 
 	player = game.add.sprite(32, 400, 'dude')
-	player.animation.add('left', [0,1,2,3],10,true)
-	player.animation.add('right', [0,1,2,3],10,true)
+	player.animations.add('left', [0,1,2,3],10,true)
+	player.animations.add('right', [0,1,2,3],10,true)
 	game.physics.arcade.enable(player);
 	player.body.gravity.y = 300;
 	player.body.bounce.y = 0.2;
@@ -55,8 +55,8 @@ function create(){
 
 	//create enemy
 	enemy1 = game.add.sprite(760, 20, 'baddie')
-	enemy1.animation.add('left',[0,1],10,true);
-	enemy1.animation.add('right',[2,3],10,true);
+	enemy1.animations.add('left',[0,1],10,true);
+	enemy1.animations.add('right',[2,3],10,true);
 	game.body.arcade.enable(enemy1);
 	enemy1.body,gravity.y = 500;
 	emey1.body.bounce.y = 0.2;
@@ -71,7 +71,7 @@ function create(){
 		var star = stars.create(i * 70,0, 'stars');
 		star.body.gravity.y = 200;
 		star.body.bounce.y = 0.7 + Math.random()* 0.2;
-	}
+	} 
 
 	//create keyboard entries
 	cursors = game.input.keyboard.creatCursorKeys();
@@ -79,7 +79,7 @@ function create(){
 
 }
 
-}
+
 
 function update(){
 	//lesson 9
@@ -91,13 +91,13 @@ function update(){
 	if(cursors.left.isDown){
 		//move left
 		player.body.velocity.x = -150;
-		player.animation.play('left');
+		player.animations.play('left');
 	} else if(cursors.right.isDown){
 		//move right
 		player.body.velocity.x = 150;
-		player.animation.play('right');
+		player.animations.play('right');
 	} else {
-		player.animation.stop();
+		player.animations.stop();
 		player.frame = 4;
 	}
 		
@@ -127,10 +127,10 @@ function endGame(){
 
 function moveEnemy(){
 	if(enemy1.x){
-		enemy1.animation.play('left');
+		enemy1.animations.play('left');
 		enemy1.body.velocity.x = -120;
 	} else if(enemy1.x < 405){
-		enemy1.animation.play('right');
+		enemy1.animations.play('right');
 		enemy1.body.velocity.x = 120;
 	}
 }
