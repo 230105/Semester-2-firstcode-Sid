@@ -57,9 +57,9 @@ function create(){
 	enemy1 = game.add.sprite(760, 20, 'baddie')
 	enemy1.animations.add('left',[0,1],10,true);
 	enemy1.animations.add('right',[2,3],10,true);
-	game.body.arcade.enable(enemy1);
-	enemy1.body,gravity.y = 500;
-	emey1.body.bounce.y = 0.2;
+	game.physics.arcade.enable(enemy1);
+	enemy1.body.gravity.y = 500;
+	enemy1.body.bounce.y = 0.2;
 	enemy1.body.collideWorldBounds = true;
 
 
@@ -74,7 +74,7 @@ function create(){
 	} 
 
 	//create keyboard entries
-	cursors = game.input.keyboard.creatCursorKeys();
+	cursors = game.input.keyboard.createCursorKeys();
 
 
 }
@@ -119,10 +119,10 @@ function update(){
 
 function endGame(){
 	player.kill();
-	scorelabel.text. "GAME OVER! You scored " + score 
-	scoretext.visible = false;
-	lifelabel.visible = false;
-	lifetext.visible = false;
+	scoreLabel.text = "GAME OVER! You scored " + score 
+	scoreText.visible = false;
+	lifeLabel.visible = false;
+	lifeText.visible = false;
 }
 
 function moveEnemy(){
@@ -135,9 +135,9 @@ function moveEnemy(){
 	}
 }
 
-function loselife(player, enemy){
-	live -= 1; //same as lives = lives - 1
-	lifetext.setText(lives);
+function loseLife(player, enemy){
+	lives -= 1; //same as lives = lives - 1
+	lifeText.setText(lives);
 
 	enemy.kill();
 	enemy.reset(10, 20);
@@ -145,25 +145,7 @@ function loselife(player, enemy){
 
 function collectStar(player, star){
 	score += 1;
-	scoretext.setText(score);
+	scoreText.setText(score);
 	star.kill();
 	star.reset(Math.random()* 750, 0)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
