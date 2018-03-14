@@ -130,7 +130,7 @@ function endGame(){
 }
 
 function moveEnemy(){
-	if(enemy1.x){
+	if(enemy1.x > 711){
 		enemy1.animations.play('left');
 		enemy1.body.velocity.x = -120;
 	} else if(enemy1.x < 405){
