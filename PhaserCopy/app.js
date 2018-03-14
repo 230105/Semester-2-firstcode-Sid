@@ -61,6 +61,7 @@ function create(){
 	enemy1.body.gravity.y = 500;
 	enemy1.body.bounce.y = 0.2;
 	enemy1.body.collideWorldBounds = true;
+	enemy1.body.velocity.x = -120;
 
 	enemy2 = game.add.sprite(450, 200, 'baddie')
 	enemy2.animations.add('left',[0,1],10,true);
@@ -69,6 +70,7 @@ function create(){
 	enemy2.body.gravity.y = 500;
 	enemy2.body.bounce.y = 0.2;
 	enemy2.body.collideWorldBounds = true;
+	enemy2.body.velocity.x = -120;
 	
 	enemy3 = game.add.sprite(760, 200, 'baddie')
 	enemy3.animations.add('left',[0,1],10,true);
@@ -77,6 +79,7 @@ function create(){
 	enemy3.body.gravity.y = 500;
 	enemy3.body.bounce.y = 0.2;
 	enemy3.body.collideWorldBounds = true;
+	enemy3.body.velocity.x = -120;
 
 
 
