@@ -159,6 +159,22 @@ function moveEnemy(){
 		enemy1.animations.play('right');
 		enemy1.body.velocity.x = 120;
 	}
+
+	if(enemy2.x > 711){
+		enemy2.animations.play('left');
+		enemy2.body.velocity.x = -120;
+	} else if(enemy1.x < 405){
+		enemy2.animations.play('right');
+		enemy2.body.velocity.x = 120;
+	}
+
+	if(enemy3.x > 711){
+		enemy3.animations.play('left');
+		enemy3.body.velocity.x = -120;
+	} else if(enemy3.x < 405){
+		enemy3.animations.play('right');
+		enemy3.body.velocity.x = 120;
+	}
 }
 
 function loseLife(player, enemy){
