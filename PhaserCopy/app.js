@@ -102,6 +102,8 @@ function update(){
 	game.physics.arcade.collide(player, platforms);
 	game.physics.arcade.collide(stars, platforms);
 	game.physics.arcade.collide(enemy1, platforms);
+	game.physics.arcade.collide(enemy2, platforms);
+	game.physics.arcade.collide(enemy3, platforms);
 
 	//lesson 9
 	game.physics.arcade.overlap(player, stars, collectStar);
