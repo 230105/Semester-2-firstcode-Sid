@@ -98,7 +98,7 @@ function update(){
 		player.animations.play('left');
 	} else if(cursors.right.isDown){
 		//move right
-		player.body.velocity.x = 150;
+		player.body.velocity.x = 250;
 		player.animations.play('right');
 	} else {
 		player.animations.stop();
