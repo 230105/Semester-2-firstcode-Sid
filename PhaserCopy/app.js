@@ -25,14 +25,14 @@ function create(){
 	ground.scale.setTo(2,2);
 	ground.body.immovable = true;
 	//create ledges
-	var ledge = platforms.create(400, 400, 'gound');
+	var ledge = platforms.create(400, 400, 'ground');
 	ledge.body.immovable = true;
 	ledge = platforms.create(-100, 250, 'ground');
 	ledge.body.immovable = true;
 
 	
 	//setup text
-	var style = {font: "bol 32px Arial", fill: "#fff"};
+	var style = {font: "bold 32px Arial", fill: "#fff"};
 
 	//create and position score
 	scoreLabel = game.add.text(300,560,"score: ", style);
@@ -68,7 +68,7 @@ function create(){
 	stars.enableBody = true;
 	//use a loop to create 12 stars
 	for(var i = 0; i < 12; i++){
-		var star = stars.create(i * 70,0, 'stars');
+		var star = stars.create(i * 70,0, 'star');
 		star.body.gravity.y = 200;
 		star.body.bounce.y = 0.7 + Math.random()* 0.2;
 	} 
@@ -82,6 +82,10 @@ function create(){
 
 
 function update(){
+	game.physics.arcade.collide(player, platforms);
+	game.physics.arcade.collide(stars, platforms);
+	game.physics.arcade.collide(enemy1, platforms);
+
 	//lesson 9
 	game.physics.arcade.overlap(player, stars, collectStar);
 	game.physics.arcade.overlap(player, enemy1, loseLife);
